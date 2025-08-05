@@ -3,6 +3,8 @@
 Repositório com **exercícios curtos e comentados** desenvolvidos durante a disciplina de **Algoritmos e Estruturas de Dados** na graduação.  
 Os códigos foram elaborados para fixar conceitos básicos e intermediários da linguagem C, com foco em lógica, estruturas de controle, funções e manipulação de dados.
 
+> Ferramenta utilizada: **Code::Blocks**
+
 ---
 
 ## 🎯 Objetivo do Repositório
