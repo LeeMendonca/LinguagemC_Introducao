@@ -17,7 +17,7 @@ typedef struct {
     float total;
 } Pedido;
 
-// Função para salvar os dados do produto em um arquivo CSV
+// FunÃ§Ã£o para salvar os dados do produto em um arquivo CSV
 void cadastrarProduto(Produto produto) {
     FILE *arquivo = fopen("produtos.csv", "a"); // Abre em modo append
     if (arquivo == NULL) {
@@ -28,7 +28,7 @@ void cadastrarProduto(Produto produto) {
     fclose(arquivo);
 }
 
-// Função para ler e exibir os dados dos produtos do arquivo CSV
+// FunÃ§Ã£o para ler e exibir os dados dos produtos do arquivo CSV
 void lerProdutos() {
     FILE *arquivo = fopen("produtos.csv", "r");
     if (arquivo == NULL) {
@@ -43,7 +43,7 @@ void lerProdutos() {
     printf("\nLista de Produtos:\n");
     printf("=+=+=+=+=+=+=+=+=+=+=+=\n");
     while (fscanf(arquivo, "%49[^,],%f,%d\n", nome, &preco, &quantidade) != EOF) {
-        printf("Produto: %s | Preço: %.2f | Quantidade: %d\n", nome, preco, quantidade);
+        printf("Produto: %s | PreÃ§o: %.2f | Quantidade: %d\n", nome, preco, quantidade);
     }
 
     fclose(arquivo);
@@ -62,7 +62,7 @@ int main() {
         printf("1 - Novo pedido");
         printf("\n2 - Listar pedido(s)");
         printf("\n3 - Sair");
-        printf("\nEscolha uma opção: ");
+        printf("\nEscolha uma opÃ§Ã£o: ");
         int opcao;
         scanf("%d", &opcao);
 
@@ -84,7 +84,7 @@ int main() {
                     char nome[50];
                     fgets(nome, sizeof(nome), stdin);
 
-                    printf("Digite o preço do produto: ");
+                    printf("Digite o preÃ§o do produto: ");
                     float preco;
                     scanf("%f", &preco);
 
@@ -129,7 +129,7 @@ int main() {
                         printf("\n----------------------------------");
                         printf("\n#Produto %d", j + 1);
                         printf("\nNome: %s", pedidos[i].produtos[j].nome);
-                        printf("Preço: %.2f", pedidos[i].produtos[j].preco);
+                        printf("PreÃ§o: %.2f", pedidos[i].produtos[j].preco);
                         printf("\nQuantidade: %d", pedidos[i].produtos[j].quantidade);
 
                         if (pedidos[i].produtos[j + 1].quantidade == 0) {
